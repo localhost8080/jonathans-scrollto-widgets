@@ -45,14 +45,10 @@ class jonathans_scrollto_widget extends WP_Widget
      */
     function widget($args, $instance)
     {
-        extract($args);
-        $this_widget_id = $this->id;
-        echo $before_widget;
         // Display the widget
-        echo '<div class="jonathans-scrollto-widget" id="' . $this_widget_id . '">';
+        echo '<div class="jonathans-scrollto-widget">';
         echo '<img src="' . plugin_dir_url(__FILE__) . 'anchor.png' . '">';
         echo '</div>';
-        echo $after_widget;
     }
 }
 
