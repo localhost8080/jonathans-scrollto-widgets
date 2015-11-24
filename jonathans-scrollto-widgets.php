@@ -51,6 +51,8 @@ class jonathans_scrollto_widget extends WP_Widget
         
         echo '</div>';
         echo $after_widget;
+        wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__), $deps);
     }
 }
 add_action('widgets_init', create_function('', 'return register_widget("jonathans_scrollto_widget");'));
+add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_scrollto_widget_enqueue_scripts');
