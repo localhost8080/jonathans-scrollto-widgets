@@ -1,3 +1,10 @@
 .jonathans-scrollto-widget {
     text-align: center;
 }
+.jonathans-scrollto-widget-holder {
+	position: fixed;
+	right: 0;
+	top: 40px;
+	background: red;
+	z-index: 9999;
+}
