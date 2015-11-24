@@ -17,6 +17,10 @@ class jonathans_scrollto_widget extends WP_Widget
     function __construct()
     {
         parent::__construct(false, $name = __('jonathans scrollto widget', 'jonathans_scrollto_widget'));
+        add_action('wp_enqueue_scripts', array(
+            $this,
+            'jonathans_scrollto_widget_scripts'
+        ));
     }
 
     /**
@@ -47,12 +51,17 @@ class jonathans_scrollto_widget extends WP_Widget
         // Display the widget
         echo '<div class="jonathans-scrollto-widget" id="' . $this_widget_id . '">';
         echo '<img src="' . plugin_dir_url(__FILE__) . 'anchor.png' . '">';
-        // Check if title is set
-        
         echo '</div>';
         echo $after_widget;
-        wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__), $deps);
+    }
+
+    function jonathans_scrollto_widget_scripts()
+    {
+        if (! self::$did_script && is_active_widget(false, false, $this->id_base, true)) {
+            wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__));
+            self::$did_script = true;
+        }
     }
 }
 add_action('widgets_init', create_function('', 'return register_widget("jonathans_scrollto_widget");'));
-add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_scrollto_widget_enqueue_scripts');
+add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_scrollto_widget_scripts');
