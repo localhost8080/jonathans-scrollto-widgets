@@ -20,7 +20,7 @@ class jonathans_scrollto_widget extends WP_Widget
         // Plugin JS
         wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.js');
         // Plugin CSS
-        wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.css');
+        wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_style.css');
     }
 
     /**
@@ -68,7 +68,7 @@ function jonathans_stw_scripts()
     // Plugin JS
     wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.js');
     // Plugin CSS
-    wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.css');
+    wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_style.css');
 }
 
 
