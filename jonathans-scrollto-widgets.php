@@ -55,7 +55,7 @@ class jonathans_scrollto_widget extends WP_Widget
         echo $after_widget;
     }
 
-    static public function jonathans_scrollto_widget_scripts()
+    function jonathans_scrollto_widget_scripts()
     {
         if (! self::$did_script && is_active_widget(false, false, $this->id_base, true)) {
             wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__));
@@ -69,7 +69,7 @@ add_action('widgets_init', function ()
     register_widget('jonathans_scrollto_widget');
 });
 
-add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_scrollto_widget::jonathans_scrollto_widget_scripts');
+add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_scrollto_widget_scripts');
 
 
 
