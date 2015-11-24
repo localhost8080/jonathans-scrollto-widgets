@@ -17,10 +17,10 @@ class jonathans_scrollto_widget extends WP_Widget
     function __construct()
     {
         parent::__construct(false, $name = __('jonathans scrollto widget', 'jonathans_scrollto_widget'));
-        add_action('wp_enqueue_scripts', array(
-            $this,
-            'jonathans_scrollto_widget_scripts'
-        ));
+        // Plugin JS
+        wp_enqueue_script('jonathans_scrollto_widget_scripts', plugins_url('jonathans_scrollto_widget_scripts.js', dirname(__FILE__)));
+        // Plugin CSS
+        wp_enqueue_style('jonathans_scrollto_widget_style', plugins_url('jonathans_scrollto_widget_scripts.css', dirname(__FILE__)));
     }
 
     /**
@@ -53,13 +53,6 @@ class jonathans_scrollto_widget extends WP_Widget
         echo '<img src="' . plugin_dir_url(__FILE__) . 'anchor.png' . '">';
         echo '</div>';
         echo $after_widget;
-    }
-
-    function jonathans_scrollto_widget_scripts()
-    {
-        if (is_active_widget(false, false, $this->id_base, true)) {
-            wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__));
-        }
     }
 }
 
