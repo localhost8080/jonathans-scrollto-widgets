@@ -55,7 +55,7 @@ class jonathans_scrollto_widget extends WP_Widget
         echo $after_widget;
     }
 
-    function jonathans_scrollto_widget_scripts()
+    public function jonathans_scrollto_widget_scripts()
     {
         if (! self::$did_script && is_active_widget(false, false, $this->id_base, true)) {
             wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__));
