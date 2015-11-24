@@ -14,7 +14,7 @@ class jonathans_scrollto_widget extends WP_Widget
 
     /**
      */
-    function __construct()
+    function jonathans_scrollto_widget()
     {
         parent::WP_Widget(false, $name = __('jonathans scrollto widget', 'jonathans_scrollto_widget'));
     }
