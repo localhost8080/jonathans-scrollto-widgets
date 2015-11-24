@@ -68,8 +68,14 @@ add_action('widgets_init', function ()
     register_widget('jonathans_scrollto_widget');
 });
 
-add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_scrollto_widget_scripts');
+add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_stw_scripts');
 
-
+function jonathans_stw_scripts()
+{
+    // Plugin JS
+    wp_enqueue_script('jonathans_scrollto_widget_scripts', plugins_url('jonathans_scrollto_widget_scripts.js', dirname(__FILE__)));
+    // Plugin CSS
+    wp_enqueue_style('jonathans_scrollto_widget_style', plugins_url('jonathans_scrollto_widget_scripts.css', dirname(__FILE__)));
+}
 
 
