@@ -36,12 +36,8 @@ class jonathans_scrollto_widget extends WP_Widget
         // Check values
         if ($instance) {
             $title = esc_attr($instance['title']);
-            $text = esc_attr($instance['text']);
-            $textarea = esc_textarea($instance['textarea']);
         } else {
             $title = '';
-            $text = '';
-            $textarea = '';
         }
         ?>
 <p>
