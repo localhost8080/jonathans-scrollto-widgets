@@ -70,7 +70,7 @@ class jonathans_scrollto_widget extends WP_Widget
         extract($args);
         // these are the widget options
         if (! empty($instance['title'])) {
-            $title = apply_filters('widget_title', $instance['title']);
+            $title = $instance['title'];
         }
         // Display the widget
         echo '<div class="jonathans-scrollto-widget">';
