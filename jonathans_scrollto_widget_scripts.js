@@ -9,6 +9,6 @@ $(document).ready(
 						// add an index to the new list
 						$('.jonathans-scrollto-widget-holder').append(
 								'<li><a href="#scrollto' + index
-										+ '">here</a></li>');
+										+ '"><span class="fa fa-circle"></span></a></li>');
 					});
 		});
