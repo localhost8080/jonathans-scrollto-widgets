@@ -76,10 +76,10 @@ class jonathans_scrollto_widget extends WP_Widget
         
         echo '<div class="jonathans-scrollto-widget"';
         if (! empty($title)) {
-            echo 'data-src="' . $title . '"';
+            echo ' data-src="' . $title . '" ';
         }
         if (! empty($our_id)) {
-            echo 'id="scrollto' . $our_id . '"';
+            echo ' id="scrollto' . $our_id . '" ';
         }
         echo '>';
         echo '<a href="#scrollto' . $our_id . '">';
