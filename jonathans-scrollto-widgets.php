@@ -22,6 +22,7 @@ class jonathans_scrollto_widget extends WP_Widget
             'jquery'
         ), '', true);
         // Plugin CSS
+        wp_enqueue_style('prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3');
         wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_style.css');
     }
 
@@ -68,6 +69,7 @@ function jonathans_stw_scripts()
         'jquery'
     ), '', true);
     // Plugin CSS
+    wp_enqueue_style('prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3');
     wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_style.css');
 }
 
