@@ -10,10 +10,9 @@ $(document).ready(
 
             $(".jonathans-scrollto-widget").each(
                 function(index, elem) {
-                    elem.id = "scrollto" + index;
                     $('.jonathans-scrollto-widget-holder').append(
-                        '<li><a href="#scrollto'
-                        + index
+                        '<li><a href="#'
+                        + elem.id
                         + '"><span class="fa fa-circle"></span><span class="title">'
                         + $(this).data('src')
                         + '</span></a></li>');

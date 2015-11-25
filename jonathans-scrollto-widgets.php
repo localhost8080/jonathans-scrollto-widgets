@@ -68,16 +68,24 @@ class jonathans_scrollto_widget extends WP_Widget
         if (! empty($instance['title'])) {
             $title = $instance['title'];
         }
+        
+        if (! empty($instance['panels_info']['id'])) {
+            $our_id = $instance['panels_info']['id'];
+        }
         // Display the widget
         
         echo '<div class="jonathans-scrollto-widget"';
         if (! empty($title)) {
             echo 'data-src="' . $title . '"';
         }
+        if (! empty($our_id)) {
+            echo 'id="scrollto' . $our_id . '"';
+        }
         echo '>';
+        echo '<a href="#scrollto' . $our_id . '">';
         // echo '<img src="' . plugin_dir_url(__FILE__) . 'anchor.png' . '">';
         echo '<span class="fa fa-chevron-down"></span>';
-        
+        echo '</a>';
         echo '</div>';
     }
 }
