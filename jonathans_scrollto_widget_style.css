@@ -1,25 +1,27 @@
 .jonathans-scrollto-widget {
-    text-align: center;
+	text-align: center;
 }
-.jonathans-scrollto-widget span{
-    color:#74a0cd;
-    transform: scale(1, 0.5);
-    margin: 25px 0px;
-    font-size: 120px;
+
+.jonathans-scrollto-widget span {
+	color: #74a0cd;
+	transform: scale(1, 0.5);
+	margin: 25px 0px;
+	font-size: 120px;
 }
+
 .jonathans-scrollto-widget-holder {
 	position: fixed;
-	right: 0;
+	right: 20px;
 	top: 50%;
-	background: #74a0cd;
+	background: transparent;
 	z-index: 9999;
+	opacity: 0.7;
 }
+
 .jonathans-scrollto-widget-holder li {
-    list-style:none;
+	list-style: none;
 }
-.jonathans-scrollto-widget-holder li a,
-.jonathans-scrollto-widget-holder li a:hover,
-.jonathans-scrollto-widget-holder li a:visited,
-.jonathans-scrollto-widget-holder li a:active {
-    color:#ffffff;
+
+.jonathans-scrollto-widget-holder li a, .jonathans-scrollto-widget-holder li a:hover, .jonathans-scrollto-widget-holder li a:visited, .jonathans-scrollto-widget-holder li a:active {
+	color: #575756;
 }
