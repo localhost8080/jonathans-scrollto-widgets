@@ -32,7 +32,23 @@ class jonathans_scrollto_widget extends WP_Widget
      */
     function form($instance)
     {
-        // dont need to do anything here
+        
+        // Check values
+        if ($instance) {
+            $title = esc_attr($instance['title']);
+            $text = esc_attr($instance['text']);
+            $textarea = esc_textarea($instance['textarea']);
+        } else {
+            $title = '';
+            $text = '';
+            $textarea = '';
+        }
+        ?>
+<p>
+    <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Widget Title', 'jonathans_scrollto_widget'); ?></label>
+    <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+</p>
+<?php
     }
 
     /**
@@ -40,7 +56,10 @@ class jonathans_scrollto_widget extends WP_Widget
      */
     function update($new_instance, $old_instance)
     {
-        // dont have anything to update
+        $instance = $old_instance;
+        // Fields
+        $instance['title'] = strip_tags($new_instance['title']);
+        return $instance;
     }
 
     /**
@@ -48,11 +67,14 @@ class jonathans_scrollto_widget extends WP_Widget
      */
     function widget($args, $instance)
     {
+        extract($args);
+        // these are the widget options
+        $title = apply_filters('widget_title', $instance['title']);
         // Display the widget
         echo '<div class="jonathans-scrollto-widget">';
         // echo '<img src="' . plugin_dir_url(__FILE__) . 'anchor.png' . '">';
         echo '<span class="fa fa-chevron-down"></span>';
-        
+        echo '<span class="jonathans-scrollto-widget-title">' . $title . '</span>';
         echo '</div>';
     }
 }
