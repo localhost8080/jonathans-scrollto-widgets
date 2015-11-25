@@ -26,11 +26,11 @@
 	color: #575756;
 }
 
-.jonathans-scrollto-widget li a span.title {
+.jonathans-scrollto-widget-holder li a span.title {
     color:#fff;
     display:none;
 }
-.jonathans-scrollto-widget li a span.title:hover {
+.jonathans-scrollto-widget-holder li a span.title:hover {
     color:#fff;
     display:block;
 }
