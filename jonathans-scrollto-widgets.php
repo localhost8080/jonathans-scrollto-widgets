@@ -50,7 +50,9 @@ class jonathans_scrollto_widget extends WP_Widget
     {
         // Display the widget
         echo '<div class="jonathans-scrollto-widget">';
-        echo '<img src="' . plugin_dir_url(__FILE__) . 'anchor.png' . '">';
+        // echo '<img src="' . plugin_dir_url(__FILE__) . 'anchor.png' . '">';
+        echo '<span class="fa fa-chevron-down"></span>';
+        
         echo '</div>';
     }
 }
