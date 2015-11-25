@@ -67,6 +67,8 @@ class jonathans_scrollto_widget extends WP_Widget
      */
     function widget($args, $instance)
     {
+        print_r($args);
+        print_r($instance);
         extract($args);
         // these are the widget options
         if (! empty($instance['title'])) {
