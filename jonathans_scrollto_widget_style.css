@@ -4,7 +4,16 @@
 .jonathans-scrollto-widget-holder {
 	position: fixed;
 	right: 0;
-	top: 40px;
-	background: red;
+	top: 50%;
+	background: #74a0cd;
 	z-index: 9999;
+}
+.jonathans-scrollto-widget-holder li {
+    list-style:none;
+}
+.jonathans-scrollto-widget-holder li a,
+.jonathans-scrollto-widget-holder li a:hover,
+.jonathans-scrollto-widget-holder li a:visited,
+.jonathans-scrollto-widget-holder li a:active {
+    color:#ffffff;
 }
