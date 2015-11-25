@@ -1,6 +1,12 @@
 .jonathans-scrollto-widget {
     text-align: center;
 }
+.jonathans-scrollto-widget span{
+    color:#74a0cd;
+    transform: scale(1, 0.5);
+    margin: 25px 0px;
+    font-size: 120px;
+}
 .jonathans-scrollto-widget-holder {
 	position: fixed;
 	right: 0;
