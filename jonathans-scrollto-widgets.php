@@ -69,12 +69,16 @@ class jonathans_scrollto_widget extends WP_Widget
     {
         extract($args);
         // these are the widget options
-        $title = apply_filters('widget_title', $instance['title']);
+        if (! empty($instance['title'])) {
+            $title = apply_filters('widget_title', $instance['title']);
+        }
         // Display the widget
         echo '<div class="jonathans-scrollto-widget">';
         // echo '<img src="' . plugin_dir_url(__FILE__) . 'anchor.png' . '">';
         echo '<span class="fa fa-chevron-down"></span>';
-        echo '<span class="jonathans-scrollto-widget-title">' . $title . '</span>';
+        if (! empty($title)) {
+            echo '<span class="jonathans-scrollto-widget-title">' . $title . '</span>';
+        }
         echo '</div>';
     }
 }
