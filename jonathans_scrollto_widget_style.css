@@ -37,6 +37,6 @@
     font-size:12px;
 }
 
-.jonathans-scrollto-widget-holder li a span.title:hover {
+.jonathans-scrollto-widget-holder li a:hover span.title {
     display:block;
 }
