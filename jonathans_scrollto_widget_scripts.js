@@ -8,7 +8,6 @@ $(document).ready(
 						elem.id = "scrollto" + index;
 						// add an index to the new list
 						$('.jonathans-scrollto-widget-holder').append(
-								'<li><a href="#scrollto' + index
-										+ '"><span class="fa fa-circle"></span></a></li>');
+								'<li><a href="#scrollto' + index+ '"><span class="fa fa-circle"></span><span class="title">'+this.data('src')+'</span></a></li>');
 					});
 		});

@@ -8,6 +8,7 @@
 	font-size: 120px;
 }
 
+
 .jonathans-scrollto-widget-holder {
 	position: fixed;
 	right: 20px;
@@ -23,4 +24,13 @@
 
 .jonathans-scrollto-widget-holder li a, .jonathans-scrollto-widget-holder li a:hover, .jonathans-scrollto-widget-holder li a:visited, .jonathans-scrollto-widget-holder li a:active {
 	color: #575756;
+}
+
+.jonathans-scrollto-widget li a span.title {
+    color:#fff;
+    display:none;
+}
+.jonathans-scrollto-widget li a span.title:hover {
+    color:#fff;
+    display:block;
 }
