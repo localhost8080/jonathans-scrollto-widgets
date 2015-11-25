@@ -62,7 +62,9 @@ add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_stw_scripts');
 function jonathans_stw_scripts()
 {
     // Plugin JS
-    wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.js');
+    wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.js', array(
+        'jquery'
+    ), '', true);
     // Plugin CSS
     wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_style.css');
 }
