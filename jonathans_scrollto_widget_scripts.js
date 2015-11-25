@@ -1,12 +1,12 @@
 // javascripts
 $(document).ready(
     function() {
-        if ($('.jonathans-scrollto-widget').length) {
+        
+        if ($('.jonathans-scrollto-widget').length > 0) {
             $('body').append('<ul class="jonathans-scrollto-widget-holder">');
             $('.jonathans-scrollto-widget-holder').append(
-                '<li><a href="#'
-                + index
-                + '"><span class="fa fa-circle"></span><span class="title">Top</span></a></li>');
+                '<li><a href="#"><span class="fa fa-circle"></span><span class="title">Top</span></a></li>');
+        
 
             $(".jonathans-scrollto-widget").each(
                 function(index, elem) {
@@ -32,5 +32,4 @@ $(document).ready(
 
             });
         }
-
 });
