@@ -18,10 +18,13 @@ class jonathans_scrollto_widget extends WP_Widget
     {
         parent::__construct(false, $name = __('jonathans scrollto widget', 'jonathans_scrollto_widget'));
         // Plugin JS
-        wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.js', array(
-            'jquery'
-        ), '', true);
-        // Plugin CSS
+        
+        if (! is_admin()) {
+            wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.js', array(
+                'jquery'
+            ), '', true);
+            // Plugin CSS
+        }
         wp_enqueue_style('prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3');
         wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_style.css');
     }
@@ -99,11 +102,13 @@ add_action('siteorigin_panel_enqueue_admin_scripts', 'jonathans_stw_scripts');
 
 function jonathans_stw_scripts()
 {
-    // Plugin JS
-    wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.js', array(
-        'jquery'
-    ), '', true);
-    // Plugin CSS
+    if (! is_admin()) {
+        // Plugin JS
+        wp_enqueue_script('jonathans_scrollto_widget_scripts', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_scripts.js', array(
+            'jquery'
+        ), '', true);
+        // Plugin CSS
+    }
     wp_enqueue_style('prefix-font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3');
     wp_enqueue_style('jonathans_scrollto_widget_style', plugin_dir_url(__FILE__) . 'jonathans_scrollto_widget_style.css');
 }
